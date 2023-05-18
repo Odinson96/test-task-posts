@@ -4,19 +4,6 @@ import toggleMixin from '../../mixins/toggleMixin'
 export default {
   name: 'ui_modal',
   mixins: [toggleMixin]
-  // props: {
-  //   show: {
-  //     type: Boolean,
-  //     default: false,
-  //     required: true
-  //   }
-  // },
-  // methods: {
-  //   setModal(event: any) {
-  //     event.stopPropagation()
-  //     this.$emit('setVisible')
-  //   }
-  // }
 }
 </script>
 

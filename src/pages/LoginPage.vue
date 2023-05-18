@@ -1,13 +1,3 @@
-<template>
-  <div>
-    <form @submit.prevent class="loginpage_form_all">
-      <h1>Login</h1>
-      <input :value="name" @change="handleChange" type="text" placeholder="Name" />
-      <button @click="login">Enter</button>
-      <hr />
-    </form>
-  </div>
-</template>
 <script>
 import { mapMutations, mapActions } from 'vuex'
 export default {
@@ -35,6 +25,18 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <form @submit.prevent class="loginpage_form_all">
+      <h1>Enter your name</h1>
+      <input :value="name" @change="handleChange" type="text" placeholder="Name" />
+      <button @click="login">Enter</button>
+      <hr />
+    </form>
+  </div>
+</template>
+
 <style scoped>
 .loginpage_form_all {
   display: flex;

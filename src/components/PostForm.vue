@@ -26,7 +26,7 @@ export default {
 <template>
   <form class="create_posts" @submit.prevent>
     <h4>Create post</h4>
-    <ui_input v-VFocus v-model:value="post.title" type="text" placeholder="Title" />
+    <ui_input v-model:value="post.title" type="text" placeholder="Title" />
     <ui_input v-model:value="post.body" type="text" placeholder="Description" />
     <acc_button :title="'Create post'" @click="createPost"></acc_button>
   </form>
