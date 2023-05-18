@@ -22,7 +22,7 @@ export default {
 </script>
 <template>
   <div class="post">
-    <div>
+    <article>
       <div><strong>Title: </strong>{{ post.title }}</div>
       <div><strong>Body: </strong>{{ post.body }}</div>
       <button @click="$router.push(`posts/${post.id}`)" class="postitem_but_open">Open</button>
@@ -32,7 +32,7 @@ export default {
           <EditPost @save="setModal" :post="post" />
         </div>
       </ui_modal>
-    </div>
+    </article>
     <div class="div_but_post">
       <button @click="$emit('remove', post)" class="del_but">X</button>
     </div>

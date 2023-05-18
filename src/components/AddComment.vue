@@ -10,7 +10,8 @@ export default {
     return {
       comment: {
         postId: this.post.id,
-        body: ''
+        body: '',
+        name: localStorage.getItem('user')
       }
     }
   },
@@ -24,7 +25,14 @@ export default {
     }),
     saveComment() {
       this.addComment(this.comment)
+      this.$emit('save_comment')
+    },
+    getUser() {
+      this.name = localStorage.getItem('user')
     }
+  },
+  mounted() {
+    this.getUser()
   }
 }
 </script>

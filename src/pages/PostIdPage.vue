@@ -41,11 +41,15 @@ export default {
     <div class="postid_div_post">
       <h1>{{ post.title }}</h1>
       <br />
+      <article>
+        {{ post.body }}
+      </article>
+      <br />
       <h3>Comments:</h3>
       <button class="postid_button_addcomment" @click="setModal">Add comment</button>
       <ui_modal @setVisible="setModal" :show="isVisible">
         <div>
-          <AddComment @save="setModal" :post="post" />
+          <AddComment @save_comment="setModal" :post="post" />
         </div>
       </ui_modal>
       <div class="postid_div_comment-zone">
