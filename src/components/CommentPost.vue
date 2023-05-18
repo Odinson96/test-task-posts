@@ -106,6 +106,7 @@ export default {
 .commentpost_pre_body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
+  overflow-x: scroll;
 }
 
 .commentpost_div_reply {
