@@ -98,7 +98,6 @@ export default {
   padding: 3%;
   max-height: max-content;
   max-width: max-content;
-  overflow-x: scroll;
   border-radius: 12px;
   box-shadow: inset 2px 2px 6px 6px rgba(181, 179, 179, 0.462),
     inset -2px -2px 6px 6px rgba(181, 180, 180, 0.398), 5px 5px 10px 10px rgba(202, 199, 199, 0.616);
