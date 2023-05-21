@@ -18,7 +18,6 @@ export default {
   methods: {
     handleChange(event) {
       this.comment.body = event.target.value
-      console.log(this.comment)
     },
     ...mapMutations({
       addComment: 'onePost/addComment'
