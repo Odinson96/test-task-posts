@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import toggleMixin from '../../mixins/toggleMixin'
 
 export default {

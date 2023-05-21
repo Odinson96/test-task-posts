@@ -26,7 +26,4 @@ export default {
 .app_router_view {
   margin-top: 10vh;
 }
-
-.app_div_navbar {
-}
 </style>
