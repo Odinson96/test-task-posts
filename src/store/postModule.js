@@ -31,7 +31,6 @@ export const postModule = {
       state.page = page
     },
     editPost(state, editPost) {
-      // console.log(editPost.id, editPost.title, editPost.body);
       state.post = state.posts.map(el => {
         if (el.id === editPost.id) {
           el.body = editPost.body;

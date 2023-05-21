@@ -10,7 +10,6 @@ export const onePostModule = {
     }),
     mutations: {
         addComment: function addComment(state, comment) {
-            console.log(comment.body, comment.postId);
             let newComment = {
                 postId: comment.postId,
                 id: Math.random(),

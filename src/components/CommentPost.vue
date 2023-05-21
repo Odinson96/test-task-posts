@@ -14,11 +14,9 @@ export default {
   computed: {
     isSubComment() {
       let bool = !!(this.commentI.subComm && this.commentI.subComm.length > 0)
-      console.log(bool)
       return bool
     },
     logger() {
-      console.log(this.comment)
       return 1
     }
   },

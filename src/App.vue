@@ -1,16 +1,7 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 export default {
-  components: { NavBar },
-  computed: {
-    // safeRoute() {
-    //   if (!localStorage.getItem('user')) {
-    //     return this.$router.push('login')
-    //   } else {
-    //     return
-    //   }
-    // }
-  }
+  components: { NavBar }
 }
 </script>
 
