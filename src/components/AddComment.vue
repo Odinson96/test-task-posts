@@ -38,7 +38,7 @@ export default {
 <template>
   <div>
     <form @submit.prevent class="addcomment_form">
-      <textarea :value="comment.body" @change="handleChange" type="text" name="" id="" />
+      <textarea :value="comment.body" @input="handleChange" type="text" name="" id="" />
       <button @click="saveComment">Add</button>
     </form>
   </div>

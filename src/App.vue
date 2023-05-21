@@ -1,13 +1,19 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
+import { mapState } from 'vuex'
 export default {
-  components: { NavBar }
+  components: { NavBar },
+  computed: {
+    ...mapState({
+      auth: (state) => state.login.auth
+    })
+  }
 }
 </script>
 
 <template>
   <div class="app">
-    <div class="app_div_navbar">
+    <div v-if="auth" class="app_div_navbar">
       <NavBar />
     </div>
     <div class="app_router_view">

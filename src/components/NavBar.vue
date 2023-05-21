@@ -1,8 +1,12 @@
 <script>
+import { mapMutations } from 'vuex'
 export default {
   methods: {
+    ...mapMutations({
+      setUnlog: 'login/setUnlog'
+    }),
     logout() {
-      localStorage.removeItem('user')
+      this.setUnlog()
       this.$router.push('/login')
     }
   }

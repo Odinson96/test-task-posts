@@ -1,17 +1,18 @@
 
 export const loginModule = {
   state: () => ({
-    user: ''
+    user: '',
+    auth: false
   }),
-  actions: {
-    postUser: function postUser(state) {
-      sessionStorage.setItem('user', state.user)
-    }
-  },
   mutations: {
     setUser(state, name) {
+      state.auth = true
       state.user = name
       localStorage.setItem('user', name)
+    },
+    setUnlog(state) {
+      localStorage.removeItem('user')
+      state.auth = false
     }
   },
   namespaced: true

@@ -1,5 +1,5 @@
 <script>
-import { mapMutations, mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
@@ -7,9 +7,6 @@ export default {
     }
   },
   methods: {
-    ...mapActions({
-      postUser: 'login/postUser'
-    }),
     ...mapMutations({
       setUser: 'login/setUser'
     }),
@@ -30,7 +27,7 @@ export default {
   <div>
     <form @submit.prevent class="loginpage_form_all">
       <h1>Enter your name</h1>
-      <input :value="name" @change="handleChange" type="text" placeholder="Name" />
+      <input :value="name" @input="handleChange" type="text" placeholder="Name" />
       <button @click="login">Enter</button>
       <hr />
     </form>

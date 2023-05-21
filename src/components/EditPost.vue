@@ -34,18 +34,18 @@ export default {
       class="editpost_input_ui"
       v-VFocus
       :value="editPost.title"
-      @change="editPost.title = $event.target.value"
+      @input="editPost.title = $event.target.value"
       type="text"
       placeholder="Title"
     />
     <textarea
       class="editpost_input_ui"
       :value="editPost.body"
-      @change="editPost.body = $event.target.value"
+      @input="editPost.body = $event.target.value"
       type="text"
       placeholder="Description"
     />
-    <acc_button :title="'Create post'" @click="savePost"></acc_button>
+    <acc_button :title="'Edit post'" @click="savePost"></acc_button>
   </form>
 </template>
 

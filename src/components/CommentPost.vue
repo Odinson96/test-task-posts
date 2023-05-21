@@ -59,7 +59,7 @@ export default {
       <textarea
         class="commentpost_textarea_reply"
         type="text"
-        @change="handleChange"
+        @input="handleChange"
         :value="body"
       />
       <button @click="addSubcom" class="commentpost_button_reply">Reply</button>

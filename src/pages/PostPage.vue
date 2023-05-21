@@ -62,7 +62,7 @@ export default {
     <div class="create_post_div">
       <acc_button @click="setModal" :title="'Create post'"></acc_button>
       <div class="app_input_search">
-        <ui_input placeholder="Search..." @change="setSearch" name="search_input" />
+        <ui_input placeholder="Search..." @input="setSearch" name="search_input" />
         <button class="postpage_button_search">Search</button>
       </div>
     </div>
