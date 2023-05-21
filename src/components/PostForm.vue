@@ -5,7 +5,7 @@ export default {
       post: {
         title: '',
         body: '',
-        id: 0
+        id: Date.now()
       }
     }
   },
@@ -13,11 +13,6 @@ export default {
     createPost() {
       this.post.id = Date.now()
       this.$emit('create_post', this.post)
-      this.post = {
-        body: '',
-        title: '',
-        id: 0
-      }
     }
   }
 }
@@ -26,8 +21,18 @@ export default {
 <template>
   <form class="create_posts" @submit.prevent>
     <h4>Create post</h4>
-    <ui_input v-model:value="post.title" type="text" placeholder="Title" />
-    <ui_input v-model:value="post.body" type="text" placeholder="Description" />
+    <ui_input
+      @input="post.title = $event.target.value"
+      :value="post.title"
+      type="text"
+      placeholder="Title"
+    />
+    <ui_input
+      @input="post.body = $event.target.value"
+      :value="post.body"
+      type="text"
+      placeholder="Description"
+    />
     <acc_button :title="'Create post'" @click="createPost"></acc_button>
   </form>
 </template>

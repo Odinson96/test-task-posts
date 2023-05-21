@@ -71,7 +71,7 @@ export default {
       <div>
         <PostForm @create_post="createPost" />
       </div>
-    </ui_modal>
+    </ui_modal> 
   </div>
   <div v-if="!isLoading">
     <div v-if="error" class="create_post_div">
