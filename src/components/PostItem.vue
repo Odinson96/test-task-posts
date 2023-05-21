@@ -1,4 +1,5 @@
 <script>
+import { mapMutations } from 'vuex'
 import EditPost from './EditPost.vue'
 export default {
   data() {
@@ -13,8 +14,15 @@ export default {
     }
   },
   methods: {
+    ...mapMutations({
+      setSearchQuery: 'post/setSearchQuery'
+    }),
     setModal() {
       this.isVisible = !this.isVisible
+    },
+    openPost() {
+      this.setSearchQuery('')
+      this.$router.push(`posts/${this.post.id}`)
     }
   },
   components: { EditPost }
@@ -25,7 +33,7 @@ export default {
     <article>
       <div><strong>Title: </strong>{{ post.title }}</div>
       <div><strong>Body: </strong>{{ post.body }}</div>
-      <button @click="$router.push(`posts/${post.id}`)" class="postitem_but_open">Open</button>
+      <button @click="openPost" class="postitem_but_open">Open</button>
       <button @click="setModal" class="postitem_but_open">Edit</button>
       <ui_modal @setVisible="setModal" :show="isVisible">
         <div>
