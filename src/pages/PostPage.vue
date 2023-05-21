@@ -2,6 +2,7 @@
 import PostForm from '../components/PostForm.vue'
 import PostList from '../components/PostList.vue'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
+import { debounce } from '../components/functions/debounce'
 export default {
   components: {
     PostForm,
@@ -32,7 +33,7 @@ export default {
       this.setModal()
     },
     setSearch(event) {
-      this.setSearchQuery(event.target.value)
+      debounce(this.setSearchQuery(event.target.value), 100)
     },
     savePost(id, post) {
       this.editPost(id, post)
