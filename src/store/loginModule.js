@@ -10,7 +10,6 @@ export const loginModule = {
   },
   mutations: {
     setUser(state, name) {
-      console.log(name);
       state.user = name
       localStorage.setItem('user', name)
     }
